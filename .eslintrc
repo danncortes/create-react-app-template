@@ -4,7 +4,7 @@
     "es6": true,
     "jest/globals": true
   },
-  "extends": "airbnb",
+  "extends": ["airbnb", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -14,14 +14,12 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react",
-    "jest"
+    "jest",
+    "prettier"
   ],
   "rules": {
-    "indent": [
-      "error",
-      2
-    ],
+    "prettier/prettier": ["error"],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": [
       "error",
       "unix"
@@ -42,10 +40,6 @@
     "react/destructuring-assignment": [
       0,
       "never"
-    ],
-    "arrow-parens": [
-      2,
-      "always"
     ],
     "import/prefer-default-export": 1,
     "no-param-reassign": 1,

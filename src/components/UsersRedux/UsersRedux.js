@@ -3,6 +3,7 @@ import isEmpty from 'lodash/isEmpty';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userActions from '../../actions/userActions';
+import UserTable from './UserTable';
 
 class UsersRedux extends Component {
   componentDidMount() {
@@ -17,7 +18,7 @@ class UsersRedux extends Component {
     } else if (users.hasError) {
       content = 'Error Loading data';
     } else if (!isEmpty(users.data)) {
-      content = 'Content';
+      content = <UserTable data={users.data} />;
     } else {
       content = 'No content';
     }
@@ -31,4 +32,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => bindActionCreators(userActions, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersRedux);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UsersRedux);
