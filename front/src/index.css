@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+}
+
+.loading-placeholder {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 40px;
+  text-align: center;
+}
