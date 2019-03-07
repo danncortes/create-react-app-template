@@ -4,7 +4,10 @@
     "es6": true,
     "jest/globals": true
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -14,53 +17,43 @@
     "sourceType": "module"
   },
   "plugins": [
-    "jest",
-    "prettier"
+    "react",
+    "prettier",
+    "jest"
   ],
   "rules": {
-    "prettier/prettier": ["error"],
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "linebreak-style": [
-      "error",
-      "unix"
+    "prettier/prettier": [
+      "error"
     ],
-    "quotes": [
+    "react/jsx-filename-extension": 0,
+    "indent": [
       "error",
-      "single"
+      2,
+      {
+        "SwitchCase": 1
+      }
     ],
-    "semi": [
-      "error",
+    "arrow-parens": [
+      2,
       "always"
     ],
     "comma-dangle": [
       "error",
       "never"
     ],
-    "import/no-named-as-default": 0,
+    "no-unused-expressions": 0,
     "react/destructuring-assignment": [
       0,
       "never"
     ],
-    "import/prefer-default-export": 1,
-    "no-param-reassign": 1,
-    "no-use-before-define": 1,
-    "no-unused-vars": 1,
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/jsx-filename-extension": 0,
     "react/prop-types": 1,
-    "react/forbid-prop-types": 0,
     "react/require-default-props": 0,
-    "jsx-a11y/no-noninteractive-element-interactions": 0,
-    "max-len": [
-      "error",
-      {
-        "code": 150
-      }
-    ],
+    "react/forbid-prop-types": 0,
+    "import/no-named-as-default": 0,
     "react/no-unused-state": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "import/prefer-default-export": 1,
     "no-extra-boolean-cast": 0,
-    "no-unused-expressions": 0,
     "camelcase": 0
   },
   "parser": "babel-eslint"
