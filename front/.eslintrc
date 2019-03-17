@@ -54,7 +54,8 @@
     "jsx-a11y/no-noninteractive-element-interactions": 0,
     "import/prefer-default-export": 1,
     "no-extra-boolean-cast": 0,
-    "camelcase": 0
+    "camelcase": 0,
+    "react/no-did-update-set-state": 0
   },
   "parser": "babel-eslint"
 }

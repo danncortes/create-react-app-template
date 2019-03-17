@@ -70,6 +70,12 @@ class MainLayout extends Component {
           </ListItem>
         </Link>
         <Divider />
+        <Link to="/users-hooks">
+          <ListItem button key="Users Hooks">
+            <ListItemText primary="Users Hooks" />
+          </ListItem>
+        </Link>
+        <Divider />
       </div>
     );
 
